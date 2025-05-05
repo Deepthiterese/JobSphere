@@ -32,8 +32,8 @@ JobSphere is a dynamic job portal web application where job seekers and employer
    cd JobSphere
 2. **Create virtual environment**
     python -m venv env
-    source env/bin/activate  
-    # On Windows:  env\Scripts\activate
+    source env/bin/activate # On Windows:  env\Scripts\activate 
+    
 3. **Install dependencies**
     pip install -r requirements.txt
 4. **Apply migrations**
