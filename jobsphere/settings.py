@@ -145,4 +145,4 @@ STATICFILES_FINDERS = [
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'jobsphere-e3l0.onrender.com']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'https://jobsphere-e3l0.onrender.com']
