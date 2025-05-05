@@ -1,1 +1,1 @@
-web: gunicorn JobSphere.wsgi
+web: gunicorn jobsphere.wsgi
