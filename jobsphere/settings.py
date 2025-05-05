@@ -32,8 +32,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-i(bq3-e3lg2z#n!bvz-dht(2k%@xyf66#ersr9h9udb4@-0$d6'
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+
 
 ALLOWED_HOSTS = []
 
@@ -145,4 +144,5 @@ STATICFILES_FINDERS = [
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'https://jobsphere-e3l0.onrender.com']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'jobsphere-e3l0.onrender.com']
+DEBUG = False
