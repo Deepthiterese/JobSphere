@@ -1,0 +1,63 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JobSphere | Welcome</title>
+  <link rel="icon" type="image/png" href="{% static 'images/favicon.png' %}">
+
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@700&display=swap" rel="stylesheet">
+
+
+  <style>
+    .gradient-text {
+      font-family: 'Manrope', sans-serif;
+      font-weight: 700;
+      font-size: 2.5rem;
+      background: linear-gradient(90deg, #00C3D9, #009F4D);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      -webkit-text-fill-color: transparent;
+    }
+  </style>
+
+</head>
+<body class="bg-light">
+
+  <div class="container text-center mt-5">
+    <img src="{% static 'images/logo.png' %}" alt="JobSphere" height="400">
+   
+    
+    <h1 class="mt-4 animate__animated animate__fadeInDown gradient-text">
+      Welcome to JobSphere
+    </h1>
+    
+    <p class="lead animate__animated animate__fadeInUp animate__delay-1s"
+       style="font-family: 'Manrope', sans-serif; color: #00A3B0;">
+      Choose your role to get started
+    </p>
+    
+    
+
+
+    <div class="row justify-content-center mt-5">
+      <div class="col-md-4">
+        <a href="{% url 'jobseeker_login' %}" class="btn btn-lg w-100 py-3" style="background-color: #00C3D9; border-color: #00C3D9; color: white;">
+          I'm a Job Seeker
+      </a>
+            </div>
+      <div class="col-md-4">
+        <a href="{% url 'employer_login' %}" class="btn btn-lg w-100 py-3" style="background-color: #009F4D; border-color: #009F4D; color: white;">
+          I'm an Employer
+      </a>
+            </div>
+    </div>
+  </div>
+
+</body>
+</html>

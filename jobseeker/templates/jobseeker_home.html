@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h2 class="text-center mb-4" style="color: #009F4D;">Find Jobs</h2>
+
+<form method="get" class="row g-3 mb-4">
+    <div class="col-md-3">
+        <input type="text" name="location" class="form-control" placeholder="Location">
+    </div>
+    <div class="col-md-3">
+        <input type="text" name="category" class="form-control" placeholder="Category">
+    </div>
+    <div class="col-md-3">
+        <input type="text" name="company" class="form-control" placeholder="Company">
+    </div>
+    <div class="col-md-3">
+        <button type="submit" class="btn w-100 py-2" style="background-color: #05c9df; border-color: #05c9df; color: white;">
+            Search
+        </button>
+    </div>
+</form>
+
+<div class="row">
+    {% for job in page_obj %}
+    <div class="col-md-6 mb-3">
+        <div class="card shadow-sm rounded-4">
+            <div class="card-body">
+                <h5 class="card-title" style="color: #009F4D;">{{ job.title }}</h5>
+                <h6 class="card-subtitle mb-2 text-muted">{{ job.company }} - {{ job.location }}</h6>
+                <p class="card-text">{{ job.description|truncatechars:150 }}</p>
+
+                {% if job.applied %}
+                    <button class="btn btn-secondary" disabled>Applied</button>
+                {% elif job.id %}
+                    <a href="{% url 'apply_job' job.id %}" class="btn py-2" style="background-color: #009F4D; border-color: #009F4D; color: white;">
+                        Apply
+                    </a>
+                {% elif job.url %}
+                    <a href="{{ job.url }}" class="btn btn-outline-primary" style="border-color: #05c9df; color: #05c9df;" target="_blank">
+                        View Job
+                    </a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}

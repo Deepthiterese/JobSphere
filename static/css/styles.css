@@ -1,0 +1,98 @@
+/* General Styles */
+body {
+    background-color: #f8f9fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #004d40;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #007847;
+}
+
+.navbar .navbar-brand img {
+    height: 40px;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: #ffffff;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: #A2D75A;
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: #00BCD4;
+    border-color: #00BCD4;
+}
+
+.btn-primary:hover {
+    background-color: #0097A7;
+    border-color: #0097A7;
+}
+
+.btn-success {
+    background-color: #007847;
+    border-color: #007847;
+}
+
+.btn-success:hover {
+    background-color: #005f36;
+    border-color: #005f36;
+}
+
+.btn-danger {
+    background-color: #D9534F;
+    border-color: #D9534F;
+}
+
+h1, h2, h3, h4, h5 {
+    color: #007847;
+}
+
+.lead {
+    color: #004d40;
+    font-weight: 500;
+}
+
+/* Links */
+a {
+    color: #00BCD4;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #0097A7;
+}
+
+/* Forms */
+form {
+    margin-top: 10px;
+}
+
+/* Footer (optional) */
+.footer {
+    background-color: #007847;
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* Utility */
+.bg-light-green {
+    background-color: #A2D75A;
+}
+
+.bg-aqua {
+    background-color: #00BCD4;
+}
+
+.text-green {
+    color: #007847;
+}

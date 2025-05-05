@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-6 col-lg-5">
+        <div class="card shadow-lg p-4 mt-5 rounded-4">
+            <h2 class="text-center mb-4 text-primary">Employer Login</h2>
+
+            <form method="post" novalidate>
+                {% csrf_token %}
+                <input type="text" name="username" class="form-control mb-3" placeholder="Username" required>
+                <input type="password" name="password" class="form-control mb-3" placeholder="Password" required>
+                <div class="d-grid">
+                    <button type="submit" class="btn btn-success py-2">Login</button>
+                </div>
+            </form>
+
+            <p class="text-center mt-3">
+                New to JobSphere?
+                <a href="{% url 'employer_register' %}" class="text-decoration-none">Register here</a>
+            </p>
+        </div>
+    </div>
+</div>
+{% endblock %}

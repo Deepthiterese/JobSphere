@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<head>
+    <link rel="stylesheet" href="{% static 'jobseeker_styles.css' %}">
+</head>
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6 mb-5">
+            <div class="card shadow-lg p-4 rounded-4 h-100">
+                <h3 class="text-center" style="color: #05c9df;">Apply for: {{ job.title }}</h3>
+                <h5 class="text-muted text-center mb-4">{{ job.company }} - {{ job.location }}</h5>
+
+                <form method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="{{ form.name.id_for_label }}">Full Name</label>
+                        {{ form.name }}
+                    </div>
+                    <div class="form-group">
+                        <label for="{{ form.email.id_for_label }}">Email Address</label>
+                        {{ form.email }}
+                    </div>
+                    <div class="form-group">
+                        <label for="{{ form.phone_number.id_for_label }}">Phone Number</label>
+                        {{ form.phone_number }}
+                    </div>
+                    <div class="form-group">
+                        <label for="{{ form.linkedin.id_for_label }}">LinkedIn Profile</label>
+                        {{ form.linkedin }}
+                    </div>
+                    <div class="form-group">
+                        <label for="{{ form.years_of_experience.id_for_label }}">Years of Experience</label>
+                        {{ form.years_of_experience }}
+                    </div>
+                    <div class="form-group">
+                        <label for="{{ form.resume.id_for_label }}">Upload Resume</label>
+                        {{ form.resume }}
+                    </div>
+                    <div class="form-group">
+                        <label for="{{ form.cover_letter.id_for_label }}">Cover Letter</label>
+                        {{ form.cover_letter }}
+                    </div>
+
+                    <button type="submit" class="btn py-2 w-100">
+                        Submit Application
+                    </button>
+                    <a href="{% url 'jobseeker_home' %}" class="btn btn-secondary w-100 mt-3">Back</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,80 @@
+/* form_styles.css */
+
+/* Container styles */
+.container {
+    margin-top: 30px;
+}
+
+/* Card styling */
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+    color: #05c9df;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.card h5 {
+    color: #6c757d;
+    font-size: 1rem;
+}
+
+/* Form styling */
+.form-group label {
+    font-weight: bold;
+    color: #333;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 100%;
+    margin-top: 5px;
+    font-size: 1rem;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #05c9df;
+    outline: none;
+    box-shadow: 0 0 5px rgba(5, 201, 223, 0.5);
+}
+
+/* Button styling */
+button[type="submit"] {
+    background-color: #009F4D;
+    border-color: #009F4D;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 12px 20px;
+    width: 100%;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #007f3c;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    border-color: #6c757d;
+    font-weight: 600;
+    padding: 12px 20px;
+    width: 100%;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+}
