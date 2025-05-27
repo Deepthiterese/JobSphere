@@ -43,7 +43,11 @@ JobSphere is a dynamic job portal web application where job seekers and employer
 6. **Open in browser**
     http://127.0.0.1:8000/
     
+---
+
 🌐 Deployment (Render)
+
+
 The project is deployed on Render. Visit the live application here:
 
 🔗 Live Site: https://jobsphere-e3l0.onrender.com/
